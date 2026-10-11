@@ -82,7 +82,7 @@ export const caseStatuses = [
 
 export const terms = [
   { h: 'Payment', p: 'Card for one-off bookings. Approved accounts are invoiced monthly on 30-day terms, with your purchase order on every line.' },
-  { h: 'Cancelling or rescheduling', p: 'Free with 24 hours’ notice. Inside 24 hours we charge 50% of the fee, because the slot can’t be re-used.' },
+  { h: 'Cancelling or rescheduling', p: 'Free with 24 hours’ notice. Inside 24 hours we charge 50% of the fee, because the slot can’t be re-used. Cancelling a whole on-site session inside 48 hours incurs the call-out fee.' },
   { h: 'No-shows', p: 'Charged at the full fee. We tell you by 9am the next business day so you can follow up.' },
   { h: 'Prices', p: 'Fixed for 12 months from your account opening. We give 30 days’ notice of any change.' },
   { h: 'Records', p: 'We keep candidate health records under the Privacy Act. You receive the outcome report; the candidate can request their full record.' },
