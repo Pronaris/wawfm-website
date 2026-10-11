@@ -61,7 +61,7 @@ export default function Services() {
             <div>
               <h3>Drug and alcohol testing</h3>
               <p>
-                We use urine devices certified to AS/NZS 4308:2023 and oral fluid devices to AS 4760:2019. Our collectors are trained under HLTPAT005,
+                We use urine devices certified to AS/NZS 4308:2023 and oral fluid devices to AS 4760:2019. Our collectors hold the national unit HLTPAT010 (Collect specimens for drugs of abuse testing),
                 and every specimen is under chain of custody. A non-negative result is never reported as positive until a
                 NATA-accredited laboratory confirms it. A doctor discusses any declared medication with the candidate first.
               </p>
@@ -69,8 +69,8 @@ export default function Services() {
             <div>
               <h3>Hearing tests</h3>
               <p>
-                Under the WA mines safety regulations, workers who regularly wear hearing protection need a hearing test within 3 months
-                of starting and at least every 2 years. We test to AS/NZS 1269.4 with calibrated audiometers, on your site.
+                Under WA’s work health and safety regulations, workers who are frequently required to wear hearing protection need a hearing test
+                within 3 months of starting and at least every 2 years. We test to AS/NZS 1269.4 with calibrated audiometers, on your site.
               </p>
             </div>
           </div>
@@ -98,8 +98,8 @@ export default function Services() {
         <div className="wrap">
           <h2>What we refer elsewhere</h2>
           <p>
-            Coal board, rail category 1 and 2, seafarer, aviation, diving and commercial driver medicals need
-            scheme-approved doctors. We’ll point you to the right provider, and we can still run drug and alcohol testing and hearing tests for those workers.
+            Coal board, rail safety worker, seafarer, aviation, diving and commercial driver medicals need
+            scheme-authorised health professionals. We’ll point you to the right provider, and we can still run drug and alcohol testing and hearing tests for those workers.
           </p>
           <Link to="/book" className="btn btn-primary">Get a quote</Link>
         </div>

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import EnquiryForm from '../components/EnquiryForm.jsx';
 import { contact } from '../data.js';
 
@@ -23,7 +24,7 @@ export default function Book() {
             <h2>Prefer email?</h2>
             <p><a href={`mailto:${contact.bookingsEmail}`}>{contact.bookingsEmail}</a></p>
             <h2>Candidates</h2>
-            <p>Bring photo ID, your glasses or hearing aids, and a list of your medicines. Avoid loud noise for 12 hours before a hearing test.</p>
+            <p>Bring photo ID, your glasses or hearing aids, and a list of your medicines. Avoid loud noise for at least 16 hours before a first hearing test. <Link to="/candidates">More for candidates</Link></p>
           </aside>
         </div>
       </section>

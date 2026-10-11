@@ -21,6 +21,8 @@ export default function Footer() {
             <li><Link to="/services#tests">Drug and alcohol testing</Link></li>
             <li><Link to="/services#tests">Hearing and lung function</Link></li>
             <li><Link to="/services#vaccinations">Workplace vaccinations</Link></li>
+            <li><Link to="/industries">Industries</Link></li>
+            <li><Link to="/quote">Quote estimator</Link></li>
           </ul>
         </div>
         <div>
@@ -28,6 +30,9 @@ export default function Footer() {
           <ul>
             <li><Link to="/how-it-works">How sign-off works</Link></li>
             <li><Link to="/employers">Open an employer account</Link></li>
+            <li><Link to="/employers#terms">Account terms</Link></li>
+            <li><Link to="/candidates">Information for candidates</Link></li>
+            <li><Link to="/partners">Partner pharmacies</Link></li>
             <li><Link to="/privacy">Privacy policy</Link></li>
             <li><Link to="/privacy#complaints">Feedback and complaints</Link></li>
           </ul>

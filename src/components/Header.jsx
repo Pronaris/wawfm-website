@@ -2,9 +2,11 @@ import { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 
 const links = [
-  { to: '/services', label: 'Services and prices' },
-  { to: '/how-it-works', label: 'How sign-off works' },
-  { to: '/employers', label: 'For employers' },
+  { to: '/services', label: 'Services' },
+  { to: '/industries', label: 'Industries' },
+  { to: '/how-it-works', label: 'Sign-off' },
+  { to: '/employers', label: 'Employers' },
+  { to: '/candidates', label: 'Candidates' },
 ];
 
 export default function Header() {
@@ -30,7 +32,8 @@ export default function Header() {
           {links.map((l) => (
             <NavLink key={l.to} to={l.to}>{l.label}</NavLink>
           ))}
-          <Link to="/book" className="btn btn-primary nav-cta">Book or enquire</Link>
+          <Link to="/quote" className="nav-quote">Get a quote</Link>
+          <Link to="/book" className="btn btn-primary nav-cta">Book</Link>
         </nav>
       </div>
     </header>

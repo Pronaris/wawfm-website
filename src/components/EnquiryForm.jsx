@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { contact } from '../data.js';
 
 const ENDPOINT = import.meta.env.VITE_ENQUIRY_ENDPOINT;
@@ -30,7 +30,8 @@ const empty = {
 };
 
 export default function EnquiryForm() {
-  const [f, setF] = useState(empty);
+  const { state } = useLocation();
+  const [f, setF] = useState(() => (state?.quote ? { ...empty, ...state.quote } : empty));
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState('idle'); // idle | sending | sent | failed
 

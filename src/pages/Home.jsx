@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import ReportCard from '../components/ReportCard.jsx';
-import { medicals, serviceLevels, vaccines, inc } from '../data.js';
+import CaseTracker from '../components/CaseTracker.jsx';
+import { medicals, serviceLevels, vaccines, industries, inc } from '../data.js';
 
 export default function Home() {
   const headline = medicals.filter((m) => ['essential', 'standard', 'comprehensive'].includes(m.id));
@@ -17,7 +18,7 @@ export default function Home() {
             </p>
             <div className="hero-actions">
               <Link to="/book" className="btn btn-lime btn-lg">Book an assessment</Link>
-              <Link to="/services" className="btn btn-outline-light btn-lg">See prices</Link>
+              <Link to="/quote" className="btn btn-outline-light btn-lg">Estimate a quote</Link>
             </div>
             <p className="hero-foot">Perth metro, Kwinana, Henderson, Rockingham and Peel. Early starts and Saturday mornings.</p>
           </div>
@@ -89,7 +90,43 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <Link to="/services" className="text-link">All services and add-ons</Link>
+          <div className="link-row">
+            <Link to="/quote" className="btn btn-primary">Estimate your quote</Link>
+            <Link to="/services" className="text-link">All services and add-ons</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="wrap split">
+          <div>
+            <h2>Know where every candidate is up to</h2>
+            <p>
+              Booked, consented, tested, in review, released, invoiced. You see each step as it happens,
+              so nobody rings to ask whether someone turned up.
+            </p>
+            <Link to="/employers" className="text-link">How employer accounts work</Link>
+          </div>
+          <CaseTracker />
+        </div>
+      </section>
+
+      <section className="section tint">
+        <div className="wrap">
+          <div className="section-head">
+            <h2>Built around the work WA does</h2>
+            <Link to="/industries" className="text-link">All industries</Link>
+          </div>
+          <ul className="ind-tiles">
+            {industries.map((i) => (
+              <li key={i.id}>
+                <Link to={`/industries#${i.id}`}>
+                  <span className="ind-tile-name">{i.name}</span>
+                  <span className="ind-tile-drv">{i.drivers}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -125,6 +162,17 @@ export default function Home() {
           <ul className="pill-list">
             {vaccines.map((v) => <li key={v}>{v}</li>)}
           </ul>
+        </div>
+      </section>
+
+      <section className="partner-band">
+        <div className="wrap partner-inner">
+          <div>
+            <p className="eyebrow">For pharmacy owners</p>
+            <h2>Put your consult room to work for local employers</h2>
+            <p>We’re inviting a small pilot group of WA pharmacies to deliver assessments for our clients, for a fixed fee per test.</p>
+          </div>
+          <Link to="/partners" className="btn btn-lime btn-lg">About the partner pilot</Link>
         </div>
       </section>
 

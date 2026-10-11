@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import CaseTracker from '../components/CaseTracker.jsx';
+import { terms } from '../data.js';
 
 const steps = [
   { t: 'Open an account', d: 'Tell us your business, who should receive reports, and how you’d like to pay: card for occasional bookings, or 30-day terms for regular volume.' },
@@ -41,12 +43,35 @@ export default function Employers() {
       </section>
 
       <section className="section tint">
+        <div className="wrap split">
+          <div>
+            <h2>See where every candidate is up to</h2>
+            <p>
+              Each candidate moves through six statuses, and you see each change as it happens. You never have to ring to ask whether
+              someone turned up or when the report is coming.
+            </p>
+            <p className="small">The example shows a typical clear result: booked on Monday afternoon, tested at 7:25am Tuesday, report out before lunch.</p>
+          </div>
+          <CaseTracker />
+        </div>
+      </section>
+
+      <section className="section">
         <div className="wrap">
           <h2>Who we work with</h2>
           <dl className="fit-list">
             {fits.map((f) => (
               <div key={f.h}><dt>{f.h}</dt><dd>{f.p}</dd></div>
             ))}
+          </dl>
+        </div>
+      </section>
+
+      <section className="section tint" id="terms">
+        <div className="wrap">
+          <h2>Account terms, in plain English</h2>
+          <dl className="terms-grid">
+            {terms.map((t) => <div key={t.h}><dt>{t.h}</dt><dd>{t.p}</dd></div>)}
           </dl>
         </div>
       </section>
@@ -58,7 +83,7 @@ export default function Employers() {
             <ul className="ticks">
               <li>Assessments tied to the inherent requirements of the role, to reduce discrimination risk</li>
               <li>Drug and alcohol testing to AS/NZS 4308:2023, with chain of custody and laboratory confirmation</li>
-              <li>Hearing tests on schedule under the WHS (Mines) Regulations, regulation 58</li>
+              <li>Hearing tests on schedule under regulation 58 of the WHS (General) Regulations 2022, and the Mines Regulations</li>
               <li>Health monitoring signed by a doctor, with regulator reporting</li>
               <li>Health information held in Australia under the Privacy Act</li>
             </ul>

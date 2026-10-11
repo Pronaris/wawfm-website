@@ -35,6 +35,14 @@ export default function Privacy() {
           </ul>
           <p>We don’t give employers diagnoses, medication lists or questionnaire answers unless you give separate, specific consent.</p>
 
+          <h2>Who else handles it for us</h2>
+          <p>
+            We share health information only with people who help us deliver your assessment, under written agreements that bind them to
+            the Privacy Act: our Medical Director and reviewing doctors, accredited laboratories that confirm drug tests, our partner
+            pharmacies when you’re assessed at one of their sites, and the Australian-hosted software we use to record results.
+            We don’t sell information or use it for marketing.
+          </p>
+
           <h2>Automated scoring</h2>
           <p>Our online health questionnaire is scored automatically against written criteria. A registered pharmacist reviews every result in full, and no outcome is decided by software alone.</p>
 
