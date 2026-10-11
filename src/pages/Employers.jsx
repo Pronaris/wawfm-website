@@ -10,8 +10,8 @@ const steps = [
 ];
 
 const fits = [
-  { h: 'Labour hire and recruiters', p: 'Same-day reports, early and Saturday slots, and one fixed price per role package.' },
-  { h: 'Kwinana industry and shutdown contractors', p: 'Medical days at your gate, random drug and alcohol testing rounds, and respirator fit testing.' },
+  { h: 'Labour hire and recruiters', p: 'Same-day reports, early and Saturday slots, and one published price per role package.' },
+  { h: 'Kwinana industry and shutdown contractors', p: 'Medical days at your gate, random drug and alcohol testing rounds, and respirator fit testing (from 2028).' },
   { h: 'Defence and shipbuilding supply chain', p: 'Hearing baselines and comprehensive medicals, plus doctor-signed health monitoring for welding fume and isocyanates.' },
   { h: 'Health, aged care and NDIS providers', p: 'Immunisation compliance packs covering hepatitis B, MMR, varicella, dTpa and flu, with vaccination history checks.' },
   { h: 'Councils and government', p: 'Published prices, written service levels and a capability statement for panels and tenders.' },
@@ -50,7 +50,7 @@ export default function Employers() {
               Each candidate moves through six statuses, and you see each change as it happens. You never have to ring to ask whether
               someone turned up or when the report is coming.
             </p>
-            <p className="small">The example shows a typical clear result: booked on Monday afternoon, tested at 7:25am Tuesday, report out before lunch.</p>
+            <p className="small">The example shows a typical clear result: booked on Monday afternoon, tested at 7:10am Tuesday, report out before lunch.</p>
           </div>
           <CaseTracker />
         </div>
@@ -79,7 +79,7 @@ export default function Employers() {
       <section className="section">
         <div className="wrap split">
           <div>
-            <h2>Your obligations, handled</h2>
+            <h2>Help meeting your obligations</h2>
             <ul className="ticks">
               <li>Assessments tied to the inherent requirements of the role, to reduce discrimination risk</li>
               <li>Drug and alcohol testing to AS/NZS 4308:2023, with chain of custody and laboratory confirmation</li>

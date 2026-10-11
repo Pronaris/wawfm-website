@@ -45,7 +45,7 @@ export const medicals = [
     from: true,
     signedBy: 'Doctor',
     for: 'Silica, lead, asbestos and mine-worker health monitoring',
-    includes: ['Tests by our pharmacy team under the doctor’s protocol', 'Interpreted and signed by our Medical Director', 'Regulator reporting where required'],
+    includes: ['Questionnaire, examination and lung function by our team', 'Chest imaging or blood tests by referral, quoted per hazard', 'Interpreted and signed by our Medical Director'],
   },
 ];
 
@@ -57,7 +57,7 @@ export const tests = [
   { name: 'Laboratory confirmation', price: 145, note: 'NATA-accredited laboratory, per specimen' },
   { name: 'Respirator fit test (quantitative)', price: 125, note: 'Available from 2028' },
   { id: 'doctor', name: 'Doctor review add-on', price: 169, note: 'For flagged results, or on request' },
-  { id: 'callout', name: 'On-site call-out (half day)', price: 250, note: 'Waived at 10 or more candidates' },
+  { id: 'callout', name: 'On-site call-out (half day)', price: 250, note: 'Waived at 15 or more candidates per session' },
 ];
 
 export const serviceLevels = [
@@ -84,7 +84,7 @@ export const terms = [
   { h: 'Payment', p: 'Card for one-off bookings. Approved accounts are invoiced monthly on 30-day terms, with your purchase order on every line.' },
   { h: 'Cancelling or rescheduling', p: 'Free with 24 hours’ notice. Inside 24 hours we charge 50% of the fee, because the slot can’t be re-used. Cancelling a whole on-site session inside 48 hours incurs the call-out fee.' },
   { h: 'No-shows', p: 'Charged at the full fee. We tell you by 9am the next business day so you can follow up.' },
-  { h: 'Prices', p: 'Fixed for 12 months from your account opening. We give 30 days’ notice of any change.' },
+  { h: 'Prices', p: 'Held for 12 months from your account opening, with 30 days’ notice of any change. Extras only when needed: doctor review of a flagged result ($169) and laboratory confirmation of a non-negative drug screen ($145).' },
   { h: 'Records', p: 'We keep candidate health records under the Privacy Act. You receive the outcome report; the candidate can request their full record.' },
   { h: 'Reports', p: 'Released to the contacts you nominate through your employer portal or a secure link. We never send health information as an unencrypted attachment.' },
 ];
@@ -93,14 +93,14 @@ export const industries = [
   {
     id: 'construction',
     name: 'Construction and civil',
-    drivers: 'Silica (engineered stone and concrete cutting), noise, working at heights, heavy manual handling.',
+    drivers: 'Silica from concrete and stone cutting (engineered stone has been banned in WA since July 2024), noise, heights, heavy manual handling.',
     tests: ['Comprehensive medical', 'Hearing baseline within 3 months of starting', 'Lung function', 'Drug and alcohol testing', 'Doctor-signed silica health monitoring'],
     pkg: 'comprehensive',
   },
   {
     id: 'manufacturing',
     name: 'Manufacturing, fabrication and defence supply',
-    drivers: 'Noise, welding fume, isocyanates, lead, forklift and crane operation.',
+    drivers: 'Noise, welding fume metals such as chromium, isocyanates, lead, forklift and crane operation.',
     tests: ['Comprehensive medical', 'Two-yearly hearing tests', 'Lung function', 'Doctor-signed health monitoring for lead and isocyanates'],
     pkg: 'comprehensive',
   },
@@ -122,7 +122,7 @@ export const industries = [
     id: 'labour-hire',
     name: 'Labour hire and recruitment',
     drivers: 'High volume, short notice, many role types, clients who want proof before day one.',
-    tests: ['Fixed price per role package', 'Same-day reports for clear results', 'Early-morning and Saturday slots', 'No-shows reported by 9am'],
+    tests: ['One published price per role package', 'Same-day reports for clear results', 'Early-morning and Saturday slots', 'No-shows reported by 9am'],
     pkg: 'standard',
   },
   {
@@ -154,4 +154,7 @@ export const contact = {
   privacyEmail: 'privacy@wawfm.com.au',
 };
 
-export const inc = (p) => Math.round(p * (1 + GST));
+export const inc = (p) => {
+  const v = Math.round(p * (1 + GST) * 100) / 100;
+  return Number.isInteger(v) ? String(v) : v.toFixed(2);
+};

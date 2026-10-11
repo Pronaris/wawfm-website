@@ -6,11 +6,11 @@ const addOnIds = ['hearing', 'lung', 'uds', 'oral'];
 const addOns = tests.filter((t) => addOnIds.includes(t.id));
 const doctor = tests.find((t) => t.id === 'doctor');
 const callout = tests.find((t) => t.id === 'callout');
-const money = (n) => n.toLocaleString('en-AU', { style: 'currency', currency: 'AUD', maximumFractionDigits: 0 });
+const money = (n) => n.toLocaleString('en-AU', { style: 'currency', currency: 'AUD', minimumFractionDigits: 0, maximumFractionDigits: 0 });
 
 // Add-ons already inside a package are hidden for that row, so nobody pays twice.
 const included = {
-  digital: [], essential: [], standard: ['uds'], comprehensive: ['uds', 'hearing', 'lung'], statutory: [],
+  digital: [], essential: [], standard: ['uds', 'oral'], comprehensive: ['uds', 'oral', 'hearing', 'lung'], statutory: ['lung'],
 };
 
 let nextId = 2;
@@ -35,7 +35,7 @@ export default function Quote() {
       return { ...r, n, pkg, adds, each, total: each * n };
     });
     const people = lines.reduce((s, l) => s + l.n, 0);
-    const callOut = where === 'onsite' && people > 0 && people < 10 ? callout.price : 0;
+    const callOut = where === 'onsite' && people > 0 && people < 15 ? callout.price : 0;
     const ex = lines.reduce((s, l) => s + l.total, 0) + callOut;
     const gst = Math.round(ex * GST);
     return { lines, people, callOut, ex, gst, inc: ex + gst };
@@ -123,11 +123,11 @@ export default function Quote() {
 
             <label className="check q-doctor">
               <input type="checkbox" checked={doctorAll} onChange={(e) => setDoctorAll(e.target.checked)} />
-              <span>Doctor review on every report <span className="opt">(+${doctor.price} each). Not needed for most roles: flagged results go to our doctor anyway.</span></span>
+              <span>Doctor review on every report <span className="opt">(+${doctor.price} each). Optional. Without it, only flagged results go to our doctor, at ${doctor.price} each.</span></span>
             </label>
           </div>
 
-          <aside className="quote-sum" aria-live="polite">
+          <aside className="quote-sum">
             <h2>Your estimate</h2>
             <ul className="q-lines">
               {calc.lines.filter((l) => l.n > 0).map((l) => (
@@ -137,10 +137,10 @@ export default function Quote() {
                 </li>
               ))}
               {calc.callOut > 0 && (
-                <li><span>On-site call-out <small>(waived from 10 people)</small></span><span>{money(calc.callOut)}</span></li>
+                <li><span>On-site call-out <small>(waived from 15 people)</small></span><span>{money(calc.callOut)}</span></li>
               )}
             </ul>
-            <dl className="q-totals">
+            <dl className="q-totals" aria-live="polite" aria-atomic="true">
               <div><dt>Total ex-GST</dt><dd>{money(calc.ex)}</dd></div>
               <div><dt>GST</dt><dd>{money(calc.gst)}</dd></div>
               <div className="q-grand"><dt>Total inc. GST</dt><dd>{money(calc.inc)}</dd></div>
@@ -148,7 +148,7 @@ export default function Quote() {
             </dl>
             <button type="button" className="btn btn-primary btn-lg q-send" onClick={send} disabled={calc.people === 0}>Send this as a quote request</button>
             <p className="small">
-              An estimate, not an invoice. Laboratory confirmation of a non-negative drug screen is ${tests.find((t) => t.id === 'lab' || t.name.startsWith('Laboratory')).price} per specimen if needed.
+              An estimate, not an invoice. Possible extras: if a result is flagged, doctor review is ${doctor.price} ex-GST (about 1 in 5 medicals in our planning). Laboratory confirmation of a non-negative drug screen is ${tests.find((t) => t.id === 'lab' || t.name.startsWith('Laboratory')).price} per specimen if needed.
               Health monitoring is priced on the hazard. More than 100 assessments a year? <Link to="/book">Ask about volume pricing.</Link>
             </p>
           </aside>

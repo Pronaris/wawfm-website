@@ -6,7 +6,7 @@ export default function Privacy() {
       <section className="page-head">
         <div className="wrap">
           <h1>Privacy policy</h1>
-          <p className="lede">How WA WorkFit Medical collects, uses and protects health information. Draft for legal review, version 0.9, October 2026.</p>
+          <p className="lede">How WA WorkFit Medical collects, uses and protects health information. Version 1.0, October 2026.</p>
         </div>
       </section>
       <section className="section">
@@ -34,12 +34,14 @@ export default function Privacy() {
             <li>Your hearing classification.</li>
           </ul>
           <p>We don’t give employers diagnoses, medication lists or questionnaire answers unless you give separate, specific consent.</p>
+          <p>For statutory health monitoring (for example silica, lead or asbestos), the law requires the doctor’s report to go to your employer, including any finding that you may have a work-related illness, and in some cases to WorkSafe WA. We may also disclose information where another law requires or authorises it.</p>
 
           <h2>Who else handles it for us</h2>
           <p>
             We share health information only with people who help us deliver your assessment, under written agreements that bind them to
             the Privacy Act: our Medical Director and reviewing doctors, accredited laboratories that confirm drug tests, our partner
             pharmacies when you’re assessed at one of their sites, and the Australian-hosted software we use to record results.
+            Our website enquiry form sends contact details only (no health information) to our workflow provider, n8n, which processes it on servers in the European Union.
             We don’t sell information or use it for marketing.
           </p>
 
@@ -47,7 +49,7 @@ export default function Privacy() {
           <p>Our online health questionnaire is scored automatically against written criteria. A registered pharmacist reviews every result in full, and no outcome is decided by software alone.</p>
 
           <h2>Where we store it</h2>
-          <p>Health information is stored in Australia on systems with access controls, multi-factor authentication and encryption. We keep records as long as the law requires: generally 7 years, and 30 years for statutory health monitoring.</p>
+          <p>Health information is stored in Australia on systems with access controls, multi-factor authentication and encryption. We keep records as long as the law requires: generally 7 years after the last entry (or until a person under 18 at the time turns 25, if later), and 30 years for statutory health monitoring.</p>
 
           <h2>Your rights</h2>
           <p>You can ask for a copy of your information, or ask us to correct it. Email <a href={`mailto:${contact.privacyEmail}`}>{contact.privacyEmail}</a> and we’ll respond within 30 days.</p>

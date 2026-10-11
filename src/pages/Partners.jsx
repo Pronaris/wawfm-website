@@ -2,7 +2,7 @@ import PartnerForm from '../components/PartnerForm.jsx';
 
 const give = [
   { h: 'Employer work, routed to you', p: 'We win and hold the employer contracts, then book candidates into partner pharmacies near their site.' },
-  { h: 'A fixed fee for each completed test', p: 'Paid monthly on a statement listing each case. No franchise fee, no royalty and no share of your pharmacy’s turnover.' },
+  { h: 'A fixed fee for each completed case', p: 'Paid monthly on a statement listing each case. No franchise fee, no royalty and no share of your pharmacy’s turnover.' },
   { h: 'The clinical system', p: 'Our Medical Director’s written protocols, the forms, the booking and reporting platform, and doctor review for anything flagged.' },
   { h: 'Training and audit', p: 'Online modules, an observed practical assessment by our clinical lead, and audits of your first 20 cases, then regular sampling.' },
 ];
@@ -12,7 +12,7 @@ const need = [
   'A pharmacist who will complete our training and be credentialled for each test',
   'Rostered time for assessments, kept separate from dispensing',
   'Professional indemnity that confirms cover for workplace health assessments',
-  'For hearing tests: a calibrated audiometer and a quiet enough room or a booth (we can advise)',
+  'For hearing tests: a calibrated audiometer you own or lease from us at market rates, and a quiet enough room or booth',
 ];
 
 const chain = [
@@ -24,8 +24,8 @@ const chain = [
 ];
 
 const faqs = [
-  { q: 'Is this a franchise?', a: 'It’s designed as a service agreement: we pay you a fixed fee per completed test and you pay us nothing. We’re taking legal advice on the Franchising Code and the WA Pharmacy Act before anyone signs, and we won’t offer anything that needs franchise disclosure until it’s in place.' },
-  { q: 'What can my pharmacist sign?', a: 'Once credentialled, your pharmacist can sign reports where every result is inside our Medical Director’s written limits. Anything flagged goes to our doctor. Statutory health monitoring and rail medicals are always doctor-signed.' },
+  { q: 'Is this a franchise?', a: 'It’s designed as a service agreement: we pay you a fixed fee per completed case and you pay us nothing. We’re taking legal advice on the Franchising Code and the WA Pharmacy Act before anyone signs, and we won’t offer anything that needs franchise disclosure until it’s in place.' },
+  { q: 'What can my pharmacist sign?', a: 'Once credentialled, your pharmacist can sign reports where every result is inside our Medical Director’s written limits. Anything flagged goes to our doctor. Statutory health monitoring is always doctor-signed, and scheme medicals such as rail are never done at partner sites.' },
   { q: 'Will it pull my pharmacist off the dispensary?', a: 'It shouldn’t. Assessments are booked into time you roster for them, not squeezed between scripts. We won’t send candidates outside the hours you give us.' },
   { q: 'Who owns the records?', a: 'WA WorkFit Medical holds the clinical record under the Privacy Act, on Australian-hosted systems. Your team enters results straight into our platform; nothing health-related stays on pharmacy systems.' },
   { q: 'How much work will we get?', a: 'We can’t promise volumes, and we won’t. We start partners where we already have employer demand nearby, and we share our booking forecasts with you each month.' },
@@ -38,8 +38,7 @@ export default function Partners() {
         <div className="wrap">
           <h1>Partner pharmacies</h1>
           <p className="lede">
-            We’re inviting a small pilot group of WA pharmacies to deliver workplace health assessments for our employer clients,
-            using your consult room and your pharmacists’ skills.
+            We plan to pilot with a small group of WA pharmacies, from 2029 once our own clinics are established, delivering workplace health assessments for our employer clients from your consult room.
           </p>
         </div>
       </section>

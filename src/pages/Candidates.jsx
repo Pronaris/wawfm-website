@@ -51,7 +51,7 @@ export default function Candidates() {
         <div className="wrap three">
           <div>
             <h2>What your employer sees</h2>
-            <p>The outcome for the role (for example “suitable” or “suitable with adjustments”), which tests were done, and the drug and alcohol result. Never your answers, diagnoses or medicines.</p>
+            <p>The outcome for the role (for example “suitable” or “suitable with adjustments”), which tests were done, the drug and alcohol result and your hearing classification. Never your answers, diagnoses or medicines. Statutory health monitoring is different: the law requires the doctor’s report, including any work-related illness, to go to your employer.</p>
           </div>
           <div>
             <h2>If a drug screen isn’t clear</h2>

@@ -13,8 +13,8 @@ export default function Home() {
           <div className="hero-copy">
             <h1>Pre-employment medicals that come to your site.</h1>
             <p className="lede">
-              Our pharmacists run every assessment at your workplace or our Myaree rooms,
-              and sign clear results the same day. Our Medical Director reviews anything flagged.
+              Our pharmacists and trained technicians assess candidates at your workplace or our Myaree rooms,
+              and a pharmacist signs clear results the same day. Our Medical Director reviews anything flagged.
             </p>
             <div className="hero-actions">
               <Link to="/book" className="btn btn-lime btn-lg">Book an assessment</Link>
@@ -73,7 +73,7 @@ export default function Home() {
         <div className="wrap">
           <div className="section-head">
             <h2>Prices you can see before you book</h2>
-            <p>Fixed prices per role, ex-GST. No doctor fee on clear results.</p>
+            <p>Published prices per role, ex-GST. No doctor fee on clear results.</p>
           </div>
           <div className="price-table" role="table" aria-label="Main medical packages">
             {headline.map((m) => (
@@ -136,7 +136,7 @@ export default function Home() {
             <h2>We bring the clinic to your gate</h2>
             <p>
               Our mobile clinic sets up at your site with hearing, lung function, drug and alcohol testing
-              and a private consult space. A half-day visit can cover a whole shutdown crew before first shift.
+              and a private consult space. A half-day visit covers a crew of 10 to 15 before first shift.
             </p>
             <p>Can’t get away? Candidates can come to our Myaree consult room on weekday evenings or Saturday morning.</p>
           </div>
@@ -170,7 +170,7 @@ export default function Home() {
           <div>
             <p className="eyebrow">For pharmacy owners</p>
             <h2>Put your consult room to work for local employers</h2>
-            <p>We’re inviting a small pilot group of WA pharmacies to deliver assessments for our clients, for a fixed fee per test.</p>
+            <p>We plan to pilot with a small group of WA pharmacies, delivering assessments for our clients for a fixed fee per completed case.</p>
           </div>
           <Link to="/partners" className="btn btn-lime btn-lg">About the partner pilot</Link>
         </div>

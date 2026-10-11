@@ -458,3 +458,4 @@ input[aria-invalid='true'] { border-color: #b3261e; }
   .q-fields { grid-template-columns: 1fr; }
   .q-count input { max-width: 140px; }
 }
+.prelaunch { background: var(--lime); color: var(--navy); font-family: var(--head); font-weight: 600; font-size: 0.85rem; padding: 7px 0; text-align: center; }

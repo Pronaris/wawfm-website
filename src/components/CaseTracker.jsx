@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { caseStatuses } from '../data.js';
 
 // Illustrative timeline for one candidate. Times show a typical same-day, pharmacist-signed case.
-const times = ['Mon 3:10pm', 'Mon 6:42pm', 'Tue 7:25am', '—', 'Tue 11:42am', 'Fri, monthly'];
+const times = ['Mon 3:10pm', 'Mon 6:42pm', 'Tue 7:10am', '—', 'Tue 11:42am', 'Fri, monthly'];
 
 export default function CaseTracker() {
   const reduce = typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
@@ -10,16 +10,18 @@ export default function CaseTracker() {
 
   useEffect(() => {
     if (reduce) return undefined;
+    // Plays through once, then rests on the final state (no endless motion).
     let i = 0;
     const id = setInterval(() => {
-      i = (i + 1) % (caseStatuses.length + 2);
-      setStep(Math.min(i, caseStatuses.length - 1));
-    }, 1400);
+      i += 1;
+      if (i >= caseStatuses.length - 1) { setStep(caseStatuses.length - 2); clearInterval(id); return; }
+      setStep(i);
+    }, 1100);
     return () => clearInterval(id);
   }, [reduce]);
 
   return (
-    <div className="tracker" aria-label="Example of how an employer tracks a candidate">
+    <div className="tracker" role="group" aria-label="Example of how an employer tracks a candidate">
       <div className="tracker-head">
         <p className="tracker-who"><span className="tracker-avatar" aria-hidden="true">JC</span> J. Citizen · Leading hand, fabrication</p>
         <p className="tracker-tag">Example</p>

@@ -16,13 +16,13 @@ import Candidates from './pages/Candidates.jsx';
 
 const meta = {
   '/': ['WA WorkFit Medical | Workplace & pre-employment medicals, Perth', 'Pre-employment medicals, drug and alcohol testing, hearing and lung function tests on-site across Perth and at Myaree. Pharmacist-led, doctor-supervised, published prices, same-day reports.'],
-  '/services': ['Services and prices | WA WorkFit Medical', 'Published, fixed prices for pre-employment medicals, drug and alcohol testing, hearing tests, lung function, health monitoring and workplace vaccinations in Perth.'],
+  '/services': ['Services and prices | WA WorkFit Medical', 'Published prices for pre-employment medicals, drug and alcohol testing, hearing tests, lung function, health monitoring and workplace vaccinations in Perth.'],
   '/industries': ['Industries | WA WorkFit Medical', 'Pre-employment and workplace health testing for construction, manufacturing, resources, logistics, labour hire, health care and government employers in WA.'],
   '/how-it-works': ['How sign-off works | WA WorkFit Medical', 'Pharmacists sign clear results under our Medical Director’s written protocol. Flagged results and statutory health monitoring are signed by a doctor.'],
   '/employers': ['For employers | WA WorkFit Medical', 'Open an employer account: role packages, live candidate tracking, same-day reports, plain-English account terms.'],
   '/candidates': ['Information for candidates | WA WorkFit Medical', 'What to bring to your pre-employment medical, what happens on the day, and who sees your results.'],
   '/quote': ['Quote estimator | WA WorkFit Medical', 'Estimate the cost of pre-employment medicals for your roles, with GST, using our published prices.'],
-  '/partners': ['Partner pharmacies | WA WorkFit Medical', 'WA pharmacy owners: deliver workplace health assessments for our employer clients for a fixed fee per completed test. Register for the pilot.'],
+  '/partners': ['Partner pharmacies | WA WorkFit Medical', 'WA pharmacy owners: deliver workplace health assessments for our employer clients for a fixed fee per completed case. Register for the pilot.'],
   '/book': ['Book or enquire | WA WorkFit Medical', 'Book a pre-employment medical or ask for a quote. We reply within one business hour.'],
   '/privacy': ['Privacy policy | WA WorkFit Medical', 'How WA WorkFit Medical collects, uses and protects health information under the Privacy Act 1988.'],
 };

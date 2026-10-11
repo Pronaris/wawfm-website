@@ -15,6 +15,12 @@ Public website for WA WorkFit Medical, a pharmacist-led, doctor-supervised workp
 
 SEO: per-page titles, descriptions and canonical URLs are set in `src/App.jsx`; `public/sitemap.xml`, `public/robots.txt` and MedicalBusiness JSON-LD in `index.html` assume the final domain https://wawfm.com.au.
 
+## Before launch (January 2027)
+
+- Remove the `noindex` meta tag in `index.html`, set `public/robots.txt` to `Allow: /`, and remove the pre-launch bar in `src/components/Header.jsx`.
+- Point wawfm.com.au at the App Platform app, then restrict the n8n webhook's allowed origins to the domain.
+- Have a solicitor review the privacy policy and account terms.
+
 ## Editing content
 
 Prices, services and service levels are defined once in `src/data.js`. Keep them in step with the Operations Manual (F04) and the financial model.

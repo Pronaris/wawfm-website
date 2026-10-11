@@ -10,7 +10,7 @@ const serviceOptions = [
   'Hearing tests',
   'Lung function tests',
   'Health monitoring (silica, lead, mines)',
-  'Respirator fit testing',
+  'Respirator fit testing (from 2028)',
   'Workplace vaccinations',
 ];
 

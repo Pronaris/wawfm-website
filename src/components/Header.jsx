@@ -15,6 +15,10 @@ export default function Header() {
   useEffect(() => setOpen(false), [pathname]);
 
   return (
+    <>
+    <div className="prelaunch" role="note">
+      <div className="wrap">Opening January 2027. Enquiries and launch bookings are open now; service levels apply from opening.</div>
+    </div>
     <header className="site-header">
       <div className="wrap header-row">
         <Link to="/" className="brand" aria-label="WA WorkFit Medical home">
@@ -37,5 +41,6 @@ export default function Header() {
         </nav>
       </div>
     </header>
+    </>
   );
 }

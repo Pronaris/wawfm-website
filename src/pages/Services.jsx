@@ -8,7 +8,7 @@ export default function Services() {
         <div className="wrap">
           <h1>Services and prices</h1>
           <p className="lede">
-            Every price is fixed and published. Prices exclude GST because employer-paid medicals attract GST.
+            Every price is published. Pre-employment medicals are not GST-free health services, so GST applies; prices are shown ex-GST with the GST-inclusive price beside them.
             Volume pricing starts at 100 assessments a year.
           </p>
         </div>
@@ -98,7 +98,7 @@ export default function Services() {
         <div className="wrap">
           <h2>What we refer elsewhere</h2>
           <p>
-            Coal board, rail safety worker, seafarer, aviation, diving and commercial driver medicals need
+            Coal mine worker, rail safety worker, seafarer, aviation, diving and commercial driver medicals need
             scheme-authorised health professionals. We’ll point you to the right provider, and we can still run drug and alcohol testing and hearing tests for those workers.
           </p>
           <Link to="/book" className="btn btn-primary">Get a quote</Link>

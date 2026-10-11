@@ -11,7 +11,7 @@ const tiers = [
     name: 'Pharmacist assessment',
     who: 'Pharmacist signs clear results',
     tone: 'pharm',
-    body: 'Our pharmacists and technicians test against the role’s Position Assessment Form: vitals, vision, urinalysis, hearing, lung function, a functional screen and drug and alcohol testing. If every result is inside the protocol’s limits, the pharmacist signs the report the same day.',
+    body: 'Our pharmacists and technicians test against the role’s Position Assessment Form: vitals, vision, urinalysis, hearing, lung function, a functional screen to a protocol approved by our Medical Director, and drug and alcohol testing. If every result is inside the protocol’s limits, the pharmacist signs the report the same day.',
   },
   {
     name: 'Medical Director review',
@@ -34,8 +34,8 @@ export default function HowItWorks() {
         <div className="wrap">
           <h1>How sign-off works</h1>
           <p className="lede">
-            Pharmacists do the testing. A pharmacist signs a report when every result is clear,
-            and a doctor signs when one isn’t. Written thresholds decide which, not anyone’s judgement on the day.
+            Pharmacists and trained technicians do the testing. A pharmacist signs a report when every result is clear,
+            and a doctor signs when one isn’t. Written thresholds set the minimum for escalation, and a pharmacist can always refer to the doctor.
           </p>
         </div>
       </section>
@@ -64,14 +64,15 @@ export default function HowItWorks() {
             <p>
               A health screening report against the role’s inherent requirements. It states the outcome: suitable, suitable with
               adjustments or restrictions, further information needed, or not suitable for the role as described.
-              It also lists the tests completed. You make the employment decision.
+              It also lists the tests completed, the drug and alcohol result and the hearing classification. You make the employment decision.
             </p>
           </div>
           <div>
             <h2>What you never receive</h2>
             <p>
               Diagnoses, medication lists or questionnaire answers. Candidates consent separately to each disclosure,
-              and we keep health information private under the Privacy Act.
+              and we keep health information private under the Privacy Act. Statutory health monitoring is the exception:
+              the law requires the doctor’s report, including any work-related illness, to go to you.
             </p>
           </div>
           <div>
@@ -91,7 +92,7 @@ export default function HowItWorks() {
             <summary>Is a pharmacist-signed report a medical certificate?</summary>
             <p>
               No. It’s a health screening report that gives an opinion on whether the candidate can safely meet the role’s requirements.
-              Outside schemes such as coal, rail and statutory health monitoring, no WA law requires a doctor to sign pre-employment assessments.
+              Outside statutory health monitoring and scheme medicals (rail, coal mine worker, commercial driver, seafarer, aviation and diving), no WA law requires a doctor to sign pre-employment assessments.
               Where the law does require a doctor, our Medical Director signs.
             </p>
           </details>
